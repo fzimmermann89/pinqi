@@ -1,0 +1,12 @@
+trainer:
+  max_epochs: 100
+model:
+  class_path: E2E.solutions.mantis
+  init_args:
+    outsidemaskstrength: 1.0
+    lam_kloss: 0.1
+    lr_net: 0.001
+
+data:
+  init_args:
+    batchsize: 8

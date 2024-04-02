@@ -1,0 +1,21 @@
+trainer:
+  max_epochs : 80
+model:
+  class_path: E2E.solutions.cgNN2
+  init_args:
+      ynettype: '2.5d'
+      ytag : false
+      yiterations: 1
+      y0iterations: 2
+      ylayer: 3
+      yinitial_filters: 8
+      pretrain_length: 5
+      e2e: true  
+      ynetargs:
+        activation: 'silu' 
+      xnetargs:
+        activation: 'silu' 
+
+data:
+  init_args:
+      batchsize: 8

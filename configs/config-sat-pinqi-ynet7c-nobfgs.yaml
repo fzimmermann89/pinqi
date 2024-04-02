@@ -1,0 +1,61 @@
+trainer:
+  max_epochs: 80
+model:
+  class_path: E2E.solutions.pinqi
+  init_args:
+    initial_lambdas:
+      - - 0.1
+        - 0.2
+      - - 0.1
+        - 0.1
+      - - 0.1
+        - 0.1
+      - - 0.2
+        - 0.1
+      - - 0.3
+        - 0.1
+    iterations: 5
+    tag: true
+    shiftscale: true
+    iterateNet: true
+    use_nonlinear_solver: false
+    lr_net: 0.004
+    lr_lam: 0.001
+    min_lr: 0.0001
+    weight_decay: 1e-2
+    warmup_length: 1500
+    pretrain_length: 4
+    loss_prev_weights:
+      - 0.1
+      - 0.05
+      - 0.05
+      - 0.05
+      - 0.05
+    loss: "mse"
+    y0iterations: 2
+    initial_filters: 32
+    feature_growth:
+      - 1.
+      - 2
+      - 1.5
+      - 1.34
+      - 1.
+      - 1.
+    layer: 4
+    netargs:
+      activation: "silu"
+      change_filters_last: false
+      norm: "group16"
+      residual: "inner"
+    yinitial_filters: 16
+    ynetargs:
+      activation: "silu"
+      residual: "inner"
+      norm: "group8"
+      change_filters_last: false
+    yiterateNet: true
+    ynettype: "2.5d"
+    ylayer: 4
+data:
+  init_args:
+    batchsize: 8

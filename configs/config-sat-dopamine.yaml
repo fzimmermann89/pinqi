@@ -1,0 +1,11 @@
+trainer:
+  max_epochs: 80
+model:
+  class_path: E2E.solutions.dopamine
+  init_args:
+    iterations: 10
+    lr_net: 0.0003
+
+data:
+  init_args:
+    batchsize: 8

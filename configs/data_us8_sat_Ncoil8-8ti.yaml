@@ -1,0 +1,18 @@
+data:
+  class_path: E2E.problems.T1BrainwebCartSat
+  init_args:
+      path: /data/zimmer08/data/brainwebClasses/
+      acceleration: 8
+      Ncoils: 8
+      noise_strength:
+        - 0.001
+        - 0.04
+      ti:
+        - 0.2
+        - 0.5
+        - 0.75
+        - 1.0
+        - 1.25
+        - 1.5 
+        - 2
+        - 8

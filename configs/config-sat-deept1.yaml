@@ -1,0 +1,10 @@
+trainer:
+  max_epochs: 100
+model:
+  class_path: E2E.solutions.deepT1
+  init_args:
+    pretrain_length: 0.5
+
+data:
+  init_args:
+    batchsize: 8

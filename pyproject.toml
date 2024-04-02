@@ -1,0 +1,20 @@
+[tool.black]
+line-length = 240
+
+[tool.pyright]
+include = ["E2E"]
+exclude = ["**/node_modules",
+    "**/__pycache__",
+    "**/.neptune",
+    "**/tmp",
+    "**/lightning_logs",
+    "**/.ipynb_checkpoints",
+]
+ignore = ["E2E/old"]
+defineConstant = { DEBUG = true }
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+pythonVersion = "3.9"
+pythonPlatform = "Linux"
